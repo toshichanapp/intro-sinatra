@@ -4,6 +4,10 @@
 </head>
 <body>
   <h1>ブログ一覧</h1>
-  <p>ブログはまだ投稿されていません..</p>
+  <% blogs = ["ブログ1","ブログ2","ブログ3"] %>
+
+  <% blogs.each do |blog| %>
+    <%= blog %>
+  <% end %>
 </body>
 </html>
