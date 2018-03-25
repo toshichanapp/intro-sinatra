@@ -40,6 +40,9 @@ get '/users' do
 end
 
 post '/users/confirm' do
+  params.each do |key, val|
+    return erb :form if params[key].empty?
+  end
   @name    = params['name']
   @email   = params['email']
   @password = params['password']
