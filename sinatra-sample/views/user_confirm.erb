@@ -7,6 +7,6 @@
   <a href="/users">新規登録に戻る</a>
   <p>お名前:<%= @name %></p>
   <p>メールアドレス:<%= @email %></p>
-  <p>パスワード:<%= @password %></p>
+  <p>パスワード:<%= "*" * @password.length %></p>
 </body>
 </html>
