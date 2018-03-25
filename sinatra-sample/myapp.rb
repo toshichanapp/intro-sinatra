@@ -9,7 +9,7 @@ get '/contacts' do
   erb :contacts
 end
 
-get '/a' do
+post '/a' do
   erb :a
 end
 
