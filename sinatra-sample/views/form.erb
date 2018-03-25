@@ -3,6 +3,13 @@
   <meta charset="UTF-8">
 </head>
 <body>
+  <div>
+    <% unless @errors.nil? %>
+      <% @errors.each do |error| %>
+        <%= error %>
+      <% end %>
+    <% end %>
+  </div>
   <form action="/users/confirm" method="POST">
     <h1>新規登録</h1>
     <div>

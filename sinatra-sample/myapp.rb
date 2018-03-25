@@ -40,9 +40,14 @@ get '/users' do
 end
 
 post '/users/confirm' do
-  params.each do |key, val|
-    return erb :form if params[key].empty?
+  @errors = []
+  permits = %w[name email password]
+  permits.each do |key|
+    if params[key].empty?
+      @errors << "#{key}を入力してください"
+    end
   end
+  return erb :form unless @errors.empty?
   @name    = params['name']
   @email   = params['email']
   @password = params['password']
