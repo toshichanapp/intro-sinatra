@@ -9,6 +9,13 @@ get '/contacts' do
   erb :contacts
 end
 
+post '/contacts' do
+  @name    = params['name']
+  @email   = params['email']
+  @content = params['content']
+  erb :confirm
+end
+
 post '/a' do
   @name    = params['name']
   @email   = params['email']
